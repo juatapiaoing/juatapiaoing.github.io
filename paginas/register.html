@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="/estilos/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <form class="form">
+            <h2>Registrate Aquí</h2>
+            <!-- Ingreso del nombre --> 
+            <div class="form__input">
+                <div class="label__container">
+                    <label for="form__input">Nombre</label>
+                </div>
+                <input type="text">
+            </div>
+            <!-- Ingreso del correo -->  
+            <div class="form__input">
+                <div class="label__container">      
+                    <label for="form__input">Correo</label>
+                </div>              
+                <input type="email" required>
+            </div>
+            <!-- Ingreso de la contraseña -->
+            <div class="form__input">
+                <div class="label__container">
+                    <label for="form__input">Contraseña</label>
+                </div>
+                <input type="password" required>
+            </div>
+            <!-- Repetir la contraseña -->
+            <div class="form__input">
+                <div class="label__container">
+                    <label for="form__input">Confirmar Contraseña</label>
+                </div>
+                <input type="password" required>
+            </div>
+            <!--Botón de registrar-->
+            <div class="form__input">
+                <button class="button__submit" type="button">Registrar</button>
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
