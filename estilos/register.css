@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Montserrat, sans-serif;
+    background: linear-gradient(135deg, #2d2d30 0%, #261a2c 50%, #2d2d30 100%);
     justify-content: center;
     display: flex;
     align-items: center;
