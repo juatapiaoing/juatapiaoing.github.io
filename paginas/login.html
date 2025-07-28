@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="/estilos/login.css">
+    <link rel="icon" href="/icons/icono.svg" type="icons/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>login</title>  
+
+</head>
+<body>
+    <main>
+        <div class ="image__container">
+            <img src="/img/imagen__login.png" alt="Imagen de inicio de sesión">
+        </div>
+        <form>
+        <h2>Iniciar Sesión</h2>
+        <!--CORREO-->  
+        
+        <div class="form__input">
+            <div class="label__container">      
+                <label for="form__input">correo</label>
+            </div>              
+            <input type="email" required>
+        </div>
+
+        <!--CONTRASEÑA-->
+
+        <div class="form__input">
+            <div class="label__container">
+                <label for="form__input">contraseña</label>
+            </div>
+            <input type="password" required>
+            <p><a href="/paginas/recuperar_contraseña.html">¿Olvidaste tu contraseña?</a></p>
+        </div>
+
+        <!--BOTON-->
+        <div class="form__input">
+            <button class="button__submit" type="button"> Iniciar</button>
+        </div>
+        <!--REGISTRAR SI NO TIENE CUENTA-->
+        <div class="form__direction">
+            <p>¿No tienes cuenta? <a href="/paginas/register.html">Regístrate</a></p>
+        </div>
+
+
+    </form>
+    </main>
+    <footer>
+
+
+    </footer>
+</body>
+<script src="/scripts/login.js"></script>
+<script src="https://kit.fontawesome.com/c4dbd48bf6.js" crossorigin="anonymous"></script>
+</html>

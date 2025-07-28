@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    width: 100%;
+    max-width: 300px;
+    min-height: 350px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 8px 32px rgba(171, 87, 194, 0.2);
+    border-radius: 15px;
+    border: 1px solid rgba(194, 87, 167, 0.1);
+}
