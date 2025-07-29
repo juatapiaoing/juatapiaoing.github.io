@@ -89,7 +89,8 @@ main {
 /* Título del Formulario */
 .form h2 {
     text-align: center;
-    margin: 0 0 10px 0; /* Elimina margen superior y laterales, añade margen inferior */
+    margin: 0;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.3em;
@@ -98,13 +99,13 @@ main {
     background: linear-gradient(45deg, #b39ddb, #a68bbf);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Permite que el gradiente sea el color del texto */
+    -webkit-text-fill-color: #fff; 
 }
 
 /* Contenedor de cada campo de input (Block: form, Element: input) */
 .form__input {
     padding: 6px 20px;
-    margin: 20px 0;
+    margin: 8px 0;
     animation: slideInLeft 0.6s ease-out; /* Animación de entrada para cada campo */
     animation-fill-mode: both; /* Mantiene el estado final de la animación */
     display: flex;
@@ -170,14 +171,16 @@ input:focus {
 /* --- Botón de Submit --- */
 /* Estilos para el botón de registro */
 .button__submit {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 0.8em;
     width: 100%;
     box-sizing: border-box;
     padding: 6px 12px;
+    margin-top: 24px;
     border: none;
-    background-color: #4a4a4a;
+    background-color: #7c0aac;
     color: #d1c4e9;
-    font-weight: 100;
-    font-size: 1em;
     cursor: pointer;
     transition: all 0.3s ease; /* Transiciones para hover y active */
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -204,7 +207,7 @@ input:focus {
 
 /* Estados de interacción del botón */
 .button__submit:hover {
-    background-color: #6a4a7a;
+    background-color: rgba(138, 124, 168, 0.4);
     transform: translateY(-2px);
     box-shadow: 0px 5px 20px rgba(138, 124, 168, 0.3);
 }
@@ -309,6 +312,18 @@ p {
         padding: 8px 0;
     }
     /* Las reglas para .image__container se han eliminado ya que no están en tu HTML */
+    .container__image {
+        max-width: 0;
+        max-height: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        display: none;
+    }
+
+    .container__image img {
+        display: none;
+    }
 }
 
 /* Estilos para pantallas con un ancho máximo de 400px (móviles muy pequeños) */
@@ -336,4 +351,27 @@ p {
         padding: 7px 0;
     }
     /* Las reglas para .image__container se han eliminado ya que no están en tu HTML */
+    .container__image {
+        max-width: 0;
+        max-height: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        display: none;
+    }
+}
+
+
+.container__image {
+    display: flex;
+    width: 380px;
+    height: 535px;
+    border-radius: 10px;
+    animation: slideInUp 0.8s ease-out, formGlow 3s ease-in-out infinite alternate;
+}
+
+.container__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
