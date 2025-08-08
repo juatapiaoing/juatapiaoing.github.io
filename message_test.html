@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios - Tu Hermana</title>
+    <link rel="stylesheet" href="estilos/message_test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-navegacion">
+        <a href="html archives/user/profile_test.html" class="btn-volver">← Volver al Perfil</a>
+        <h1 class="header-titulo">Comentarios</h1>
+    </header>
+
+    <main class="mensaje-contenedor">
+        <!-- Publicación Principal -->
+        <section class="publicacion-principal">
+            <div class="post-card">
+                <div class="post-header">
+                    <img src="https://via.placeholder.com/50/6f42c1/ffffff?text=TH" alt="Perfil" class="post-avatar">
+                    <div class="post-info">
+                        <h3 class="post-usuario">Tu Hermana <span class="premium-badge">✓ PREMIUM</span></h3>
+                        <p class="post-arroba">@tuhermana77</p>
+                        <span class="post-tiempo">hace 2 horas</span>
+                    </div>
+                </div>
+                
+                <div class="post-contenido">
+                    <p class="post-texto">¡Nueva sesión de fotos disponible! 🔥 Para mis suscriptores VIP: contenido exclusivo en mensajes privados. ¿Listos para ver algo increíble? 💋</p>
+                    <div class="post-hashtags">
+                        <span class="hashtag">#Exclusive</span>
+                        <span class="hashtag">#Premium</span>
+                        <span class="hashtag">#PhotoShoot</span>
+                    </div>
+                </div>
+
+                <div class="post-imagen">
+                    <img src="https://via.placeholder.com/400x300/6f42c1/ffffff?text=Contenido+Exclusivo" alt="Publicación" class="imagen-post">
+                </div>
+
+                <div class="post-acciones">
+                    <button class="accion-btn like-btn">
+                        <span class="icono">❤️</span>
+                        <span class="contador">234</span>
+                    </button>
+                    <button class="accion-btn comment-btn active">
+                        <span class="icono">💬</span>
+                        <span class="contador">67</span>
+                    </button>
+                    <button class="accion-btn share-btn">
+                        <span class="icono">📤</span>
+                        <span class="contador">12</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Comentarios -->
+        <section class="comentarios-seccion">
+            <div class="comentarios-header">
+                <h2>Comentarios <span class="comentarios-count">(67)</span></h2>
+                <div class="comentarios-filter">
+                    <select class="filter-select">
+                        <option value="recientes">Más recientes</option>
+                        <option value="populares">Más populares</option>
+                        <option value="antiguos">Más antiguos</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Formulario para nuevo comentario -->
+            <div class="nuevo-comentario">
+                <img src="https://via.placeholder.com/40/6f42c1/ffffff?text=YO" alt="Tu avatar" class="mi-avatar">
+                <div class="comentario-input-container">
+                    <textarea class="comentario-textarea" placeholder="Escribe tu comentario..." rows="3"></textarea>
+                    <div class="comentario-acciones">
+                        <button class="emoji-btn" title="Añadir emoji">😊</button>
+                        <button class="enviar-btn">Comentar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista de comentarios -->
+            <div class="comentarios-lista">
+                <!-- Comentario destacado -->
+                <article class="comentario destacado">
+                    <img src="https://via.placeholder.com/40/ff6b6b/ffffff?text=VIP" alt="Usuario VIP" class="comentario-avatar">
+                    <div class="comentario-contenido">
+                        <div class="comentario-header">
+                            <h4 class="comentario-usuario">MariaVIP <span class="vip-badge">VIP</span></h4>
+                            <span class="comentario-tiempo">hace 1 hora</span>
+                        </div>
+                        <p class="comentario-texto">¡Increíble como siempre! 🔥 Definitivamente mi creadora favorita. El contenido premium vale cada centavo 💕</p>
+                        <div class="comentario-acciones">
+                            <button class="comentario-like">❤️ 45</button>
+                            <button class="comentario-responder">Responder</button>
+                            <button class="comentario-reportar">Reportar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Comentario normal -->
+                <article class="comentario">
+                    <img src="https://via.placeholder.com/40/4ecdc4/ffffff?text=AF" alt="Usuario" class="comentario-avatar">
+                    <div class="comentario-contenido">
+                        <div class="comentario-header">
+                            <h4 class="comentario-usuario">AlexFan92</h4>
+                            <span class="comentario-tiempo">hace 2 horas</span>
+                        </div>
+                        <p class="comentario-texto">¿Cuándo será la próxima sesión en vivo? No me quiero perder ninguna 😍</p>
+                        <div class="comentario-acciones">
+                            <button class="comentario-like">❤️ 12</button>
+                            <button class="comentario-responder">Responder</button>
+                            <button class="comentario-reportar">Reportar</button>
+                        </div>
+                        
+                        <!-- Respuesta al comentario -->
+                        <div class="respuesta">
+                            <img src="https://via.placeholder.com/30/6f42c1/ffffff?text=TH" alt="Tu Hermana" class="respuesta-avatar">
+                            <div class="respuesta-contenido">
+                                <div class="respuesta-header">
+                                    <h5 class="respuesta-usuario">Tu Hermana <span class="premium-badge">✓ PREMIUM</span></h5>
+                                    <span class="respuesta-tiempo">hace 1 hora</span>
+                                </div>
+                                <p class="respuesta-texto">¡Pronto anunciaré la fecha! Mantente atento a mis historias 💋</p>
+                                <div class="respuesta-acciones">
+                                    <button class="respuesta-like">❤️ 8</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Más comentarios -->
+                <article class="comentario">
+                    <img src="https://via.placeholder.com/40/45b7d1/ffffff?text=LR" alt="Usuario" class="comentario-avatar">
+                    <div class="comentario-contenido">
+                        <div class="comentario-header">
+                            <h4 class="comentario-usuario">LucasRoyal</h4>
+                            <span class="comentario-tiempo">hace 3 horas</span>
+                        </div>
+                        <p class="comentario-texto">La calidad de tus fotos es impresionante 📸 ¿Qué cámara usas?</p>
+                        <div class="comentario-acciones">
+                            <button class="comentario-like">❤️ 7</button>
+                            <button class="comentario-responder">Responder</button>
+                            <button class="comentario-reportar">Reportar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="comentario">
+                    <img src="https://via.placeholder.com/40/f7b801/ffffff?text=SM" alt="Usuario" class="comentario-avatar">
+                    <div class="comentario-contenido">
+                        <div class="comentario-header">
+                            <h4 class="comentario-usuario">SofiaModel</h4>
+                            <span class="comentario-tiempo">hace 4 horas</span>
+                        </div>
+                        <p class="comentario-texto">¡Eres una inspiración! Me encanta tu estilo 💫</p>
+                        <div class="comentario-acciones">
+                            <button class="comentario-like">❤️ 15</button>
+                            <button class="comentario-responder">Responder</button>
+                            <button class="comentario-reportar">Reportar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="comentario">
+                    <img src="https://via.placeholder.com/40/e74c3c/ffffff?text=DF" alt="Usuario" class="comentario-avatar">
+                    <div class="comentario-contenido">
+                        <div class="comentario-header">
+                            <h4 class="comentario-usuario">DiegoFoto</h4>
+                            <span class="comentario-tiempo">hace 5 horas</span>
+                        </div>
+                        <p class="comentario-texto">Siempre superándote a ti misma 🔥 El contenido premium de esta semana fue espectacular</p>
+                        <div class="comentario-acciones">
+                            <button class="comentario-like">❤️ 23</button>
+                            <button class="comentario-responder">Responder</button>
+                            <button class="comentario-reportar">Reportar</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Cargar más comentarios -->
+            <div class="cargar-mas">
+                <button class="btn-cargar-mas">Cargar más comentarios</button>
+                <p class="comentarios-restantes">Quedan 62 comentarios más</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para reportar comentario -->
+    <div class="modal-overlay" id="modalReportar">
+        <div class="modal-reportar">
+            <div class="modal-header">
+                <h3>Reportar comentario</h3>
+                <button class="modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <p>¿Por qué deseas reportar este comentario?</p>
+                <div class="razones-reporte">
+                    <label><input type="radio" name="razon" value="spam"> Spam</label>
+                    <label><input type="radio" name="razon" value="acoso"> Acoso</label>
+                    <label><input type="radio" name="razon" value="contenido-inapropiado"> Contenido inapropiado</label>
+                    <label><input type="radio" name="razon" value="otro"> Otro</label>
+                </div>
+                <textarea placeholder="Comentario adicional (opcional)" class="reporte-comentario"></textarea>
+                <div class="modal-acciones">
+                    <button class="btn-cancelar">Cancelar</button>
+                    <button class="btn-reportar">Reportar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/message_test.js"></script>
+</body>
+</html>

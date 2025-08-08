@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../estilos/user/index_user.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Página Principal - Usuario</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__user">
+            <div class="logo">B</div>
+            <div class="perfil__user--buttons">
+                <button onclick="window.location.href='../../html archives/user/profile_test.html '">Mi Perfil</button>
+                <button onclick="showHelp()">Ayuda</button>
+            </div>
+            <div class="search__bar">
+                <input type="text" placeholder="Buscar">
+            </div>
+            <div class="state">
+                <button class="status-btn active" data-status="online">Disponible</button>
+                <button class="status-btn" data-status="away">Ausente</button>
+                <button class="status-btn" data-status="busy">Ocupado</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main__container">
+        <main class="content__area">
+            <section class="catalogo__categoria premium">
+                <div class="catalogo__header">
+                    <h2>CATÁLOGO <span class="span__premium">PREMIUM</span></h2>
+                </div>
+                <div class="lista__productos">
+                    <article class="producto" onclick="goToProfile('premium', 1)">
+                        <div class="placeholder__img">
+                            <img src="../../img/ejemplo.png" alt="Producto">
+                        </div>
+                        <h3>María Elena <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>MX</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">111k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('premium', 2)">
+                        <div class="placeholder__img"></div>
+                        <h3>Amanda Rose <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>US</span>
+                            </div>
+                            <div class="estado__actividad away"></div>
+                        </div>
+                        <span class="vistas">85k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('premium', 3)">
+                        <div class="placeholder__img"></div>
+                        <h3>Isabella Santos</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>BR</span>
+                            </div>
+                            <div class="estado__actividad offline"></div>
+                        </div>
+                        <span class="vistas">92k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('premium', 4)">
+                        <div class="placeholder__img"></div>
+                        <h3>Carmen López <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>ES</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">156k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('premium', 5)">
+                        <div class="placeholder__img"></div>
+                        <h3>Sophie Martin</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>FR</span>
+                            </div>
+                            <div class="estado__actividad away"></div>
+                        </div>
+                        <span class="vistas">73k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('premium', 6)">
+                        <div class="placeholder__img"></div>
+                        <h3>Anna Mueller <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>DE</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">234k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('premium', 7)">
+                        <div class="placeholder__img"></div>
+                        <h3>Giulia Rossi</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>IT</span>
+                            </div>
+                            <div class="estado__actividad offline"></div>
+                        </div>
+                        <span class="vistas">45k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('premium', 8)">
+                        <div class="placeholder__img"></div>
+                        <h3>Sakura Tanaka <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>JP</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">189k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="catalogo__categoria gold">
+                <div class="catalogo__header">
+                    <h2>CATÁLOGO <span class="span__gold">GOLD</span></h2>
+                </div>
+                <div class="lista__productos">
+                    <article class="producto" onclick="goToProfile('gold', 1)">
+                        <div class="placeholder__img"></div>
+                        <h3>Emma Johnson <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>CA</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">145k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('gold', 2)">
+                        <div class="placeholder__img"></div>
+                        <h3>Olivia Brown</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>AU</span>
+                            </div>
+                            <div class="estado__actividad away"></div>
+                        </div>
+                        <span class="vistas">98k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('gold', 3)">
+                        <div class="placeholder__img"></div>
+                        <h3>Charlotte Smith <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>UK</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">167k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('gold', 4)">
+                        <div class="placeholder__img"></div>
+                        <h3>Lotte van Berg</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>NL</span>
+                            </div>
+                            <div class="estado__actividad offline"></div>
+                        </div>
+                        <span class="vistas">52k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('gold', 5)">
+                        <div class="placeholder__img"></div>
+                        <h3>Astrid Holm <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>SE</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">123k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('gold', 6)">
+                        <div class="placeholder__img"></div>
+                        <h3>Ingrid Hansen</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>NO</span>
+                            </div>
+                            <div class="estado__actividad away"></div>
+                        </div>
+                        <span class="vistas">87k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('gold', 7)">
+                        <div class="placeholder__img"></div>
+                        <h3>Maja Larsen <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>DK</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">201k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('gold', 8)">
+                        <div class="placeholder__img"></div>
+                        <h3>Aino Virtanen</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>FI</span>
+                            </div>
+                            <div class="estado__actividad offline"></div>
+                        </div>
+                        <span class="vistas">64k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="catalogo__categoria silver">
+                <div class="catalogo__header">
+                    <h2>CATÁLOGO <span class="span__silver">SILVER</span></h2>
+                </div>
+                <div class="lista__productos">
+                    <article class="producto" onclick="goToProfile('silver', 1)">
+                        <div class="placeholder__img"></div>
+                        <h3>Valentina Ruiz</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>AR</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">78k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('silver', 2)">
+                        <div class="placeholder__img"></div>
+                        <h3>Catalina Morales <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>CL</span>
+                            </div>
+                            <div class="estado__actividad away"></div>
+                        </div>
+                        <span class="vistas">92k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('silver', 3)">
+                        <div class="placeholder__img"></div>
+                        <h3>Lucía Vargas</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>PE</span>
+                            </div>
+                            <div class="estado__actividad offline"></div>
+                        </div>
+                        <span class="vistas">43k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('silver', 4)">
+                        <div class="placeholder__img"></div>
+                        <h3>Sofía Herrera <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>CO</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">115k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('silver', 5)">
+                        <div class="placeholder__img"></div>
+                        <h3>Andreina Castro</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>VE</span>
+                            </div>
+                            <div class="estado__actividad away"></div>
+                        </div>
+                        <span class="vistas">67k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('silver', 6)">
+                        <div class="placeholder__img"></div>
+                        <h3>Camila Torres</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>EC</span>
+                            </div>
+                            <div class="estado__actividad offline"></div>
+                        </div>
+                        <span class="vistas">38k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('silver', 7)">
+                        <div class="placeholder__img"></div>
+                        <h3>Florencia Silva <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>UY</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">81k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                    <article class="producto" onclick="goToProfile('silver', 8)">
+                        <div class="placeholder__img"></div>
+                        <h3>Mía Benítez</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>PY</span>
+                            </div>
+                            <div class="estado__actividad away"></div>
+                        </div>
+                        <span class="vistas">29k</span>
+                        <div class="producto-overlay">
+                            <button class="quick-message">💬 Mensaje</button>
+                            <button class="add-favorite">💖 Favorito</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Quick Message Modal -->
+    <div class="modal-overlay" id="quickMessageModal">
+        <div class="modal-quick-message">
+            <div class="modal-header">
+                <h3>💬 Enviar Mensaje Rápido</h3>
+                <button class="modal-close" onclick="closeQuickMessage()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="user-info">
+                    <img id="messageUserAvatar" src="" alt="Avatar">
+                    <div>
+                        <h4 id="messageUserName"></h4>
+                        <span id="messageUserStatus" class="status-indicator"></span>
+                    </div>
+                </div>
+                <textarea id="quickMessageText" placeholder="Escribe tu mensaje..." rows="4"></textarea>
+                <div class="message-templates">
+                    <button onclick="setTemplate('¡Hola! Me encanta tu perfil 😍')">Saludo</button>
+                    <button onclick="setTemplate('¿Estás disponible para chat privado? 💕')">Consulta</button>
+                    <button onclick="setTemplate('Me gustaría conocerte mejor 💋')">Interés</button>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn-cancel" onclick="closeQuickMessage()">Cancelar</button>
+                    <button class="btn-send" onclick="sendQuickMessage()">Enviar 📤</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="modal-overlay" id="helpModal">
+        <div class="modal-help">
+            <div class="modal-header">
+                <h3>❓ Centro de Ayuda</h3>
+                <button class="modal-close" onclick="closeHelp()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="help-section">
+                    <h4>🎯 Navegación</h4>
+                    <p>• Haz clic en cualquier perfil para ver más detalles</p>
+                    <p>• Usa los botones de estado para cambiar tu disponibilidad</p>
+                    <p>• La barra de búsqueda te ayuda a encontrar creadores específicos</p>
+                </div>
+                <div class="help-section">
+                    <h4>💬 Mensajes</h4>
+                    <p>• Envía mensajes rápidos con el botón 💬</p>
+                    <p>• Agrega a favoritos con el botón 💖</p>
+                    <p>• Los puntos indican el estado de conexión</p>
+                </div>
+                <div class="help-section">
+                    <h4>🏆 Categorías</h4>
+                    <p>• Premium: Contenido exclusivo y de alta calidad</p>
+                    <p>• Gold: Creadores verificados con experiencia</p>
+                    <p>• Silver: Nuevos talentos emergentes</p>
+                </div>
+                <div class="help-contact">
+                    <button onclick="window.location.href='mailto:support@example.com'">📧 Contactar Soporte</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/index_user.js"></script>
+</body>
+</html>

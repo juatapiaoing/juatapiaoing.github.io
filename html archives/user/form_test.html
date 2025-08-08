@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../estilos/user/form_test.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Formulario</title>
+</head>
+<body>    
+    <header>
+        <h1 class="header__formulario">FORMULARIO</h1>
+    </header>
+    
+    <main class="content__area">
+        <!-- Sección: Datos Personales -->
+        <div class="form__box">
+            <h3 class="form__title">Datos Personales</h3>
+            <form class="primary__form">
+                <div class="form__group"> 
+                    <label>Nombre</label> 
+                    <input type="text">
+                </div>
+                <div class="form__group">
+                    <label>Apellido</label>
+                    <input type="text">
+                </div>
+                <div class="form__group">
+                    <label>Nombre Artístico</label>
+                    <input type="text">
+                </div>
+                <div class="form__group">
+                    <label>Edad</label>
+                    <input type="text">
+                </div>
+                <div class="form__group">
+                    <label>Contacto</label>
+                    <input type="text">
+                </div>
+                <h3 class="form__title">Medidas</h3>
+                <div class="form__group--medidas">
+                    <label class="medida__label">Busto</label>
+                    <input type="number" class="medida__input">
+                    <label class="medida__label">Cintura</label>
+                    <input type="number" class="medida__input">
+                    <label class="medida__label">Glutios</label>
+                    <input type="number" class="medida__input">
+                </div>
+            </form>
+        </div>
+
+        <!-- Sección: Cuéntanos sobre ti -->
+        <div class="form__box">
+            <h3 class="form__title">Cuéntanos sobre ti</h3>
+            <div class="form__group">
+                <label>Agrega una descripción</label>
+                <textarea rows="8" id="user__info"></textarea>
+            </div>
+            <div class="form__group">
+                <label>Servicios que ofrecerías</label>
+                <textarea rows="8" id="user__services"></textarea>
+            </div>
+            <div class="form__group">
+                <label>Sube tu imagen</label>
+                <input type="file" accept="image/*" class="form__file"> 
+            </div>     
+        </div>
+
+        <!-- Sección: Categorías -->
+        <div class="form__box">
+            <h3 class="form__title">Categorías</h3>
+            <div class="category__group">
+                <button class="button--premium">Premium</button>
+                <button class="button--gold">Gold</button>
+                <button class="button--silver">Silver</button>
+            </div>
+        </div>
+
+        <!-- Botones de envío -->
+        <div class="form__group--submit">
+            <button type="submit" class="form__submit">Enviar</button>
+            <button type="reset" class="form__reset" onclick="window.location.href='../user/profile_test.html'">Cancelar</button>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

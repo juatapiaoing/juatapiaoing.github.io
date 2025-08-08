@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../estilos/admin/index_admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Panel de Administración</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__admin">
+            <div class="logo">B</div>
+            <div class="perfil__admin--buttons">
+                <button onclick="showAdminProfile()">Mi Perfil</button>
+                <button onclick="showAdminPanel()">Panel de Admin</button>
+            </div>
+            <div class="search__bar">
+                <input type="text" placeholder="Buscar usuarios, reportes..." id="adminSearch">
+            </div>
+            <div class="state">
+                <button class="status-btn active" data-status="online">Disponible</button>
+                <button class="status-btn" data-status="away">Ausente</button>
+                <button class="status-btn" data-status="busy">Ocupado</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main__container">
+        <!-- Admin Stats Dashboard -->
+        <div class="admin-stats">
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-info">
+                    <h3>2,847</h3>
+                    <p>Usuarios Activos</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚠️</div>
+                <div class="stat-info">
+                    <h3>12</h3>
+                    <p>Reportes Pendientes</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-info">
+                    <h3>$45,682</h3>
+                    <p>Ingresos del Mes</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-info">
+                    <h3>+24%</h3>
+                    <p>Crecimiento</p>
+                </div>
+            </div>
+        </div>
+
+        <main class="content__area">
+            <section class="catalogo__categoria premium">
+                <div class="catalogo__header">
+                    <h2>USUARIOS <span class="span__premium">PREMIUM</span> 
+                        <span class="admin-controls">
+                            <button class="admin-btn" onclick="exportUsers('premium')">📊 Exportar</button>
+                            <button class="admin-btn" onclick="bulkActions('premium')">⚙️ Acciones</button>
+                        </span>
+                    </h2>
+                </div>
+                <div class="lista__productos">
+                    <article class="producto admin-producto" data-user-id="1">
+                        <div class="placeholder__img">
+                            <img src="../../img/ejemplo.png" alt="Usuario">
+                        </div>
+                        <h3>María Elena <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>MX</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">111k</span>
+                        <div class="admin-overlay">
+                            <div class="admin-actions">
+                                <button class="admin-action" onclick="viewUserDetails(1)" title="Ver Detalles">👁️</button>
+                                <button class="admin-action" onclick="editUser(1)" title="Editar">✏️</button>
+                                <button class="admin-action warn" onclick="warnUser(1)" title="Advertir">⚠️</button>
+                                <button class="admin-action danger" onclick="suspendUser(1)" title="Suspender">🚫</button>
+                            </div>
+                            <div class="user-stats">
+                                <small>💰 $2,450/mes | 📊 95% rating</small>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto admin-producto" data-user-id="2">
+                        <div class="placeholder__img"></div>
+                        <h3>Amanda Rose <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>US</span>
+                            </div>
+                            <div class="estado__actividad away"></div>
+                        </div>
+                        <span class="vistas">85k</span>
+                        <div class="admin-overlay">
+                            <div class="admin-actions">
+                                <button class="admin-action" onclick="viewUserDetails(2)" title="Ver Detalles">👁️</button>
+                                <button class="admin-action" onclick="editUser(2)" title="Editar">✏️</button>
+                                <button class="admin-action warn" onclick="warnUser(2)" title="Advertir">⚠️</button>
+                                <button class="admin-action danger" onclick="suspendUser(2)" title="Suspender">🚫</button>
+                            </div>
+                            <div class="user-stats">
+                                <small>💰 $1,890/mes | 📊 92% rating</small>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto admin-producto" data-user-id="3">
+                        <div class="placeholder__img"></div>
+                        <h3>Isabella Santos</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>BR</span>
+                            </div>
+                            <div class="estado__actividad offline"></div>
+                        </div>
+                        <span class="vistas">92k</span>
+                        <div class="admin-overlay">
+                            <div class="admin-actions">
+                                <button class="admin-action" onclick="viewUserDetails(3)" title="Ver Detalles">👁️</button>
+                                <button class="admin-action" onclick="editUser(3)" title="Editar">✏️</button>
+                                <button class="admin-action warn" onclick="warnUser(3)" title="Advertir">⚠️</button>
+                                <button class="admin-action danger" onclick="suspendUser(3)" title="Suspender">🚫</button>
+                            </div>
+                            <div class="user-stats">
+                                <small>💰 $1,650/mes | 📊 88% rating</small>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto admin-producto" data-user-id="4">
+                        <div class="placeholder__img"></div>
+                        <h3>Carmen López <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>ES</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">156k</span>
+                        <div class="admin-overlay">
+                            <div class="admin-actions">
+                                <button class="admin-action" onclick="viewUserDetails(4)" title="Ver Detalles">👁️</button>
+                                <button class="admin-action" onclick="editUser(4)" title="Editar">✏️</button>
+                                <button class="admin-action warn" onclick="warnUser(4)" title="Advertir">⚠️</button>
+                                <button class="admin-action danger" onclick="suspendUser(4)" title="Suspender">🚫</button>
+                            </div>
+                            <div class="user-stats">
+                                <small>💰 $3,120/mes | 📊 97% rating</small>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto admin-producto" data-user-id="5">
+                        <div class="placeholder__img"></div>
+                        <h3>Sophie Martin</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>FR</span>
+                            </div>
+                            <div class="estado__actividad away"></div>
+                        </div>
+                        <span class="vistas">73k</span>
+                        <div class="admin-overlay">
+                            <div class="admin-actions">
+                                <button class="admin-action" onclick="viewUserDetails(5)" title="Ver Detalles">👁️</button>
+                                <button class="admin-action" onclick="editUser(5)" title="Editar">✏️</button>
+                                <button class="admin-action warn" onclick="warnUser(5)" title="Advertir">⚠️</button>
+                                <button class="admin-action danger" onclick="suspendUser(5)" title="Suspender">🚫</button>
+                            </div>
+                            <div class="user-stats">
+                                <small>💰 $1,340/mes | 📊 85% rating</small>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto admin-producto" data-user-id="6">
+                        <div class="placeholder__img"></div>
+                        <h3>Anna Mueller <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>DE</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">234k</span>
+                        <div class="admin-overlay">
+                            <div class="admin-actions">
+                                <button class="admin-action" onclick="viewUserDetails(6)" title="Ver Detalles">👁️</button>
+                                <button class="admin-action" onclick="editUser(6)" title="Editar">✏️</button>
+                                <button class="admin-action warn" onclick="warnUser(6)" title="Advertir">⚠️</button>
+                                <button class="admin-action danger" onclick="suspendUser(6)" title="Suspender">🚫</button>
+                            </div>
+                            <div class="user-stats">
+                                <small>💰 $4,280/mes | 📊 98% rating</small>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto admin-producto" data-user-id="7">
+                        <div class="placeholder__img"></div>
+                        <h3>Giulia Rossi</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>IT</span>
+                            </div>
+                            <div class="estado__actividad offline"></div>
+                        </div>
+                        <span class="vistas">45k</span>
+                        <div class="admin-overlay">
+                            <div class="admin-actions">
+                                <button class="admin-action" onclick="viewUserDetails(7)" title="Ver Detalles">👁️</button>
+                                <button class="admin-action" onclick="editUser(7)" title="Editar">✏️</button>
+                                <button class="admin-action warn" onclick="warnUser(7)" title="Advertir">⚠️</button>
+                                <button class="admin-action danger" onclick="suspendUser(7)" title="Suspender">🚫</button>
+                            </div>
+                            <div class="user-stats">
+                                <small>💰 $890/mes | 📊 78% rating</small>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="producto admin-producto" data-user-id="8">
+                        <div class="placeholder__img"></div>
+                        <h3>Sakura Tanaka <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>JP</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">189k</span>
+                        <div class="admin-overlay">
+                            <div class="admin-actions">
+                                <button class="admin-action" onclick="viewUserDetails(8)" title="Ver Detalles">👁️</button>
+                                <button class="admin-action" onclick="editUser(8)" title="Editar">✏️</button>
+                                <button class="admin-action warn" onclick="warnUser(8)" title="Advertir">⚠️</button>
+                                <button class="admin-action danger" onclick="suspendUser(8)" title="Suspender">🚫</button>
+                            </div>
+                            <div class="user-stats">
+                                <small>💰 $3,560/mes | 📊 94% rating</small>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="catalogo__categoria gold">
+                <div class="catalogo__header">
+                    <h2>USUARIOS <span class="span__gold">GOLD</span>
+                        <span class="admin-controls">
+                            <button class="admin-btn" onclick="exportUsers('gold')">📊 Exportar</button>
+                            <button class="admin-btn" onclick="bulkActions('gold')">⚙️ Acciones</button>
+                        </span>
+                    </h2>
+                </div>
+                <div class="lista__productos">
+                    <!-- Similar structure for Gold users with different stats -->
+                    <article class="producto admin-producto" data-user-id="9">
+                        <div class="placeholder__img"></div>
+                        <h3>Emma Johnson <span class="icono__verificacion"></span></h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>CA</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">145k</span>
+                        <div class="admin-overlay">
+                            <div class="admin-actions">
+                                <button class="admin-action" onclick="viewUserDetails(9)" title="Ver Detalles">👁️</button>
+                                <button class="admin-action" onclick="editUser(9)" title="Editar">✏️</button>
+                                <button class="admin-action" onclick="promoteUser(9)" title="Promover a Premium">⬆️</button>
+                                <button class="admin-action warn" onclick="warnUser(9)" title="Advertir">⚠️</button>
+                                <button class="admin-action danger" onclick="suspendUser(9)" title="Suspender">🚫</button>
+                            </div>
+                            <div class="user-stats">
+                                <small>💰 $1,250/mes | 📊 87% rating</small>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- More Gold users... -->
+                </div>
+            </section>
+
+            <section class="catalogo__categoria silver">
+                <div class="catalogo__header">
+                    <h2>USUARIOS <span class="span__silver">SILVER</span>
+                        <span class="admin-controls">
+                            <button class="admin-btn" onclick="exportUsers('silver')">📊 Exportar</button>
+                            <button class="admin-btn" onclick="bulkActions('silver')">⚙️ Acciones</button>
+                        </span>
+                    </h2>
+                </div>
+                <div class="lista__productos">
+                    <!-- Similar structure for Silver users -->
+                    <article class="producto admin-producto" data-user-id="17">
+                        <div class="placeholder__img"></div>
+                        <h3>Valentina Ruiz</h3>
+                        <div class="info__container">
+                            <div class="nacionalidad">
+                                <div class="bandera"></div>
+                                <span>AR</span>
+                            </div>
+                            <div class="estado__actividad online"></div>
+                        </div>
+                        <span class="vistas">78k</span>
+                        <div class="admin-overlay">
+                            <div class="admin-actions">
+                                <button class="admin-action" onclick="viewUserDetails(17)" title="Ver Detalles">👁️</button>
+                                <button class="admin-action" onclick="editUser(17)" title="Editar">✏️</button>
+                                <button class="admin-action" onclick="promoteUser(17)" title="Promover a Gold">⬆️</button>
+                                <button class="admin-action warn" onclick="warnUser(17)" title="Advertir">⚠️</button>
+                                <button class="admin-action danger" onclick="suspendUser(17)" title="Suspender">🚫</button>
+                            </div>
+                            <div class="user-stats">
+                                <small>💰 $420/mes | 📊 72% rating</small>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- More Silver users... -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Admin User Details Modal -->
+    <div class="modal-overlay" id="userDetailsModal">
+        <div class="modal-user-details">
+            <div class="modal-header">
+                <h3>👤 Detalles del Usuario</h3>
+                <button class="modal-close" onclick="closeUserDetails()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="user-profile-header">
+                    <img id="detailUserAvatar" src="" alt="Avatar">
+                    <div class="user-info">
+                        <h4 id="detailUserName"></h4>
+                        <span id="detailUserCategory" class="category-badge"></span>
+                        <span id="detailUserStatus" class="status-indicator"></span>
+                    </div>
+                </div>
+                
+                <div class="user-details-tabs">
+                    <button class="tab-btn active" onclick="showTab('stats')">📊 Estadísticas</button>
+                    <button class="tab-btn" onclick="showTab('activity')">📈 Actividad</button>
+                    <button class="tab-btn" onclick="showTab('reports')">⚠️ Reportes</button>
+                    <button class="tab-btn" onclick="showTab('payments')">💰 Pagos</button>
+                </div>
+
+                <div class="tab-content" id="statsTab">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <label>Ingresos Totales</label>
+                            <span id="totalEarnings">$0</span>
+                        </div>
+                        <div class="stat-item">
+                            <label>Rating Promedio</label>
+                            <span id="avgRating">0%</span>
+                        </div>
+                        <div class="stat-item">
+                            <label>Total Visualizaciones</label>
+                            <span id="totalViews">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <label>Fecha de Registro</label>
+                            <span id="joinDate">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content hidden" id="activityTab">
+                    <div class="activity-timeline">
+                        <div class="activity-item">
+                            <span class="activity-time">Hace 2 horas</span>
+                            <span class="activity-action">Subió nuevo contenido</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-time">Hace 5 horas</span>
+                            <span class="activity-action">Respondió mensajes</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-time">Hace 1 día</span>
+                            <span class="activity-action">Actualizó perfil</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content hidden" id="reportsTab">
+                    <div class="reports-list">
+                        <div class="report-item">
+                            <span class="report-date">2024-01-15</span>
+                            <span class="report-reason">Contenido inapropiado</span>
+                            <span class="report-status resolved">Resuelto</span>
+                        </div>
+                        <div class="report-item">
+                            <span class="report-date">2024-01-10</span>
+                            <span class="report-reason">Spam</span>
+                            <span class="report-status pending">Pendiente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content hidden" id="paymentsTab">
+                    <div class="payments-list">
+                        <div class="payment-item">
+                            <span class="payment-date">2024-01-30</span>
+                            <span class="payment-amount">$1,250.00</span>
+                            <span class="payment-status paid">Pagado</span>
+                        </div>
+                        <div class="payment-item">
+                            <span class="payment-date">2023-12-30</span>
+                            <span class="payment-amount">$980.50</span>
+                            <span class="payment-status paid">Pagado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-edit" onclick="editUserFromModal()">✏️ Editar</button>
+                    <button class="btn-warn" onclick="warnUserFromModal()">⚠️ Advertir</button>
+                    <button class="btn-suspend" onclick="suspendUserFromModal()">🚫 Suspender</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div class="modal-overlay" id="adminPanelModal">
+        <div class="modal-admin-panel">
+            <div class="modal-header">
+                <h3>⚙️ Panel de Administración</h3>
+                <button class="modal-close" onclick="closeAdminPanel()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="admin-sections">
+                    <div class="admin-section">
+                        <h4>📊 Reportes del Sistema</h4>
+                        <button onclick="generateReport('users')">Reporte de Usuarios</button>
+                        <button onclick="generateReport('earnings')">Reporte de Ingresos</button>
+                        <button onclick="generateReport('activity')">Reporte de Actividad</button>
+                    </div>
+                    <div class="admin-section">
+                        <h4>🔧 Configuración</h4>
+                        <button onclick="editSiteSettings()">Configuración del Sitio</button>
+                        <button onclick="manageCategories()">Gestionar Categorías</button>
+                        <button onclick="moderationSettings()">Configuración de Moderación</button>
+                    </div>
+                    <div class="admin-section">
+                        <h4>👥 Gestión de Usuarios</h4>
+                        <button onclick="bulkUserActions()">Acciones Masivas</button>
+                        <button onclick="userVerification()">Verificaciones Pendientes</button>
+                        <button onclick="suspendedUsers()">Usuarios Suspendidos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/index_admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #601460 #1e1e2f;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: Montserrat;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #2d2d30 0%, #261a2c 50%, #2d2d30 100%);
+}
+
+header {
+    width: 100%;
+    justify-items: center;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.header__formulario {
+    color: #b3b3b3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content__area {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 330px;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 25%, #1e1e1e 75%, #1a1a1a 100%);
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Caja reutilizable para todas las secciones del formulario */
+.form__box {
+    margin-bottom: 50px;
+    width: 95%;
+    max-width: 275px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    border-left: 3px solid #601460;
+}
+
+.form__group--medidas {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.medidas__label {
+    display: block;
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+.medida__input {
+    font-family: Montserrat;
+    max-width: 80px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 6px 12px;
+    justify-self: end;
+    text-align: center;
+}
+
+.form__file {
+    max-width: 270px;
+}
+
+.form__title {
+    color: #601460;
+    font-size: 1.2rem;
+}
+
+label {
+    display: block;
+    color: #b3b3b3;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+input,
+textarea {
+    font-family: Montserrat;
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    border: none;
+    border-bottom: 2px solid #601460;
+    box-shadow: 0px 0px 15px #0003;
+    border-radius: 4px;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+
+input:hover,
+textarea:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #bc16f9;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 300px;
+    scrollbar-width: thin;
+    scrollbar-color: #601460 #1e1e2f;
+}
+
+button {
+    font-family: Montserrat;
+    font-size: 14px;
+    border-radius: 5px;
+    border-color: rgb(52, 39, 56);
+    padding: 2px 12px;
+    transition: all 0.3s ease;
+}
+
+/* Botones de categoría */
+.button--premium {
+    background: linear-gradient(135deg, #bc16f9 0%, #ea086e 100%);
+    color: #1e1e2f;
+    font-weight: bold;
+    box-shadow: 0px 0px 15px #f9731633;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.button--premium:hover {
+    box-shadow: 0px 0px 25px #f916f966;
+    transform: scale(1.05);
+}
+
+.button--gold {
+    background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+    color: #1e1e2f;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.button--gold:hover {
+    box-shadow: 0px 0px 25px #facc1566;
+    transform: scale(1.05);
+}
+
+.button--silver {
+    background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+    color: #1e1e2f;
+    font-weight: bold;
+    box-shadow: 0px 0px 15px #9ca3af33;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.button--silver:hover {
+    box-shadow: 0px 0px 25px #9ca3af66;
+    transform: scale(1.05);
+}
+
+/* Botón de envío */
+.form__submit {
+    grid-column: span 3;
+    font-family: Montserrat;
+    font-size: 16px;
+    background: linear-gradient(135deg, #601460 0%, #7f1374 100%);
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0px 0px 15px #60146033;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form__submit:hover {
+    box-shadow: 0 0 20px #601460aa;
+    transform: scale(1.01);
+}
+
+/* Botón de cancelar */
+.form__reset {
+    grid-column: span 3;
+    font-family: Montserrat;
+    font-size: 16px;
+    background: linear-gradient(135deg, #3a3a3a 0%, #2c2c2c 100%);
+    color: #b3b3b3;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form__reset:hover {
+    background-color: #601460;
+    color: #fff;
+}
+
+.form__group--submit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Responsive tablet */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Responsive desktop */
+@media screen and (min-width: 1200px) {
+    body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        min-width: 1200px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .header__formulario {
+        font-size: 1.2em;
+    }
+}
